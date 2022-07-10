@@ -1,0 +1,88 @@
+﻿@model List<PhoneViewModel>
+@{
+    ViewData["Title"] = "Analize telephones";
+    var phone1 = Model[0];
+    var phone2 = Model[1];
+}
+
+<table class="greyGridTable">
+    <thead>
+        <tr>
+            <th>INFO</th>
+            <th>@phone1.Name</th>
+            <th>@phone2.Name</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr>
+            <td>OS:</td>
+            <td>@phone1.OS</td>
+            <td>@phone2.OS</td>
+        </tr>
+        <tr>
+            <td>GPU:</td>
+            @{ if (phone1.GPU > phone2.GPU)
+                {
+                    <td class="bigger">@phone1.GPU</td>
+                    <td class="lower">@phone2.GPU</td>
+                }
+                else if (phone1.GPU == phone2.GPU)
+                {
+                    <td class="equally">@phone1.GPU</td>
+                    <td class="equally">@phone2.GPU</td>
+                }
+                else
+                {
+                    <td class="lower">@phone1.GPU</td>
+                    <td class="bigger">@phone2.GPU</td>
+                }
+            }
+        </tr>
+        <tr>
+            <td>Price:</td>
+            @{ if (phone1.Price > phone2.Price)
+                {
+                    <td class="lower">@phone1.Price</td>
+                    <td class="bigger">@phone2.Price</td>
+                }
+                else if (phone1.Price == phone2.Price)
+                {
+                    <td class="equally">@phone1.Price</td>
+                    <td class="equally">@phone2.Price</td>
+                }
+                else
+                {
+                    <td class="bigger">@phone1.Price</td>
+                    <td class="lower">@phone2.Price</td>
+                }
+            }
+        </tr>
+        <tr>
+            <td>RAM:</td>
+            @{ if (phone1.RAM > phone2.RAM)
+                {
+                    <td class="bigger">@phone1.RAM</td>
+                    <td class="lower">@phone2.RAM</td>
+                }
+                else if (phone1.RAM == phone2.RAM)
+                {
+                    <td class="equally">@phone1.RAM</td>
+                    <td class="equally">@phone2.RAM</td>
+                }
+                else
+                {
+                    <td class="lower">@phone1.RAM</td>
+                    <td class="bigger">@phone2.RAM</td>
+                }
+            }
+        </tr>
+    </tbody>
+        <tfoot>
+            <tr>
+                <td>foot1</td>
+                <td>foot2</td>
+                <td>foot3</td>
+            </tr>
+        </tfoot>
+    </table>

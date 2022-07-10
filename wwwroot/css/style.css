@@ -1,0 +1,52 @@
+﻿.rl {
+    border-right: 2px solid gray;
+}
+hr {
+    border: 1px solid gray;
+}
+.text {
+    display: inline;
+    padding: 0px 10px;
+    font-size: 20px;
+}
+table.greyGridTable tbody td {
+    font-size: 13px;
+}
+
+.greyGridTable{
+    width: 60%;
+    align-content: center;
+}
+table.greyGridTable thead {
+    background: #FFFFFF;
+    border-bottom: 2px solid #333333;
+}
+table.greyGridTable tfoot {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    border-top: 2px solid #333333;
+    border-bottom: 2px solid #333333;
+}
+table.greyGridTable tfoot td {
+    font-size: 14px;
+}
+table.greyGridTable tfoot td {
+    border-right: 2px solid gray;
+}
+table.greyGridTable tbody td {
+    border-right: 2px solid gray;
+    padding-bottom: 10px;
+}
+.ll{
+    border-left: 1px solid gray;
+}
+td.lower{
+    color: red;
+}
+td.bigger {
+   color: green;
+}
+td.equally{
+    color: black;
+}

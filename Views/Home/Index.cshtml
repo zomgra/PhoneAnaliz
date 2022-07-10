@@ -1,0 +1,10 @@
+﻿@{ 
+    ViewData["Title"] = "Home Page";
+}
+
+@using (Html.BeginForm(controllerName: "Analysis", actionName: "Index"))
+{
+    @Html.DropDownList("id", ViewBag.Phones as SelectList, new { id = "Name" })
+    @Html.DropDownList("id", ViewBag.Phones as SelectList, new { id = "Name" })
+    <input class="bigger" type="submit" value="Submit">
+}
